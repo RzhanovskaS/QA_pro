@@ -21,7 +21,7 @@ function pow(x, y) {
     }
     return result;
 }
-let result = pow (3,  2)
+let result = pow (2,  3)
 
 console.log (result)
 
