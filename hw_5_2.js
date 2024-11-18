@@ -7,7 +7,7 @@ var services = {
         let total = 0;
         for (let key in this) {
             if (typeof this[key] === "string") {
-                total += parseInt(this[key]);
+                total += parseFloat(this[key]);
             }
         }
         return total + " грн";
@@ -18,7 +18,7 @@ var services = {
         let min = Infinity;
         for (let key in this) {
             if (typeof this[key] === "string") {
-                let price = parseInt(this[key]); 
+                let price = parseFloat(this[key]); 
                 if (price < min) {
                     min = price;
                 }
@@ -32,7 +32,7 @@ var services = {
         let max = -Infinity;
         for (let key in this) {
             if (typeof this[key] === "string") {
-                let price = parseInt(this[key]); 
+                let price = parseFloat(this[key]); 
                 if (price > max) {
                     max = price;
                 }
@@ -43,7 +43,7 @@ var services = {
 };
 
 
-services["Розбите скло"] = "200 грн";
+services["Розбите скло"] = "200.5 грн";
 
 
 console.log("Загальна вартість:", services.price());     
