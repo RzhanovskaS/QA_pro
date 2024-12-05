@@ -25,7 +25,7 @@ arr.forEach(item => {
 
 
 var trustedEmails = arr
-    .map(item => item.email)
+    .map(item => item.email.trim())
     .filter(email => email && trustedDomains.test(email));
 
 console.log(trustedEmails);
