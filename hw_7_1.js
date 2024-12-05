@@ -16,11 +16,16 @@ var arr = [
     },
 ];
 
+var trustedDomains = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\||.(gmail\.com|yahoo\.com)$/;
 
-var trustedDomains = /^(?:[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)?)@[a-zA-Z]+\.(gmail\.com|yahoo\.com)$/;
+// Перевірка кожного email
+arr.forEach(item => {
+    console.log(`Email: "${item.email}", Valid: ${trustedDomains.test(item.email.trim())}`);
+});
 
+// Фільтрація email
 var trustedEmails = arr
-    .map(item => item.email) 
-    .filter(email => email && trustedDomains.test(email)); 
+    .map(item => item.email) // Видалення пробілів
+    .filter(email => email && trustedDomains.test(email));
 
-console.log(trustedEmails); 
+console.log(trustedEmails);
