@@ -20,7 +20,7 @@ var trustedDomains = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\||.(gmail\.com|yahoo\.co
 
 
 arr.forEach(item => {
-    console.log(`Email: "${item.email}", Valid: ${trustedDomains.test(item.email.trim())}`);
+    console.log(`Email: "${item.email}", Check: ${trustedDomains.test(item.email.trim())}`);
 });
 
 
